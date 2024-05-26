@@ -14,6 +14,8 @@ public class AuthController {
     @Autowired
     private FirebaseAuthService firebaseAuthService;
 
+    
+
     @PostMapping("/google")
     public ResponseEntity<String> authenticateWithGoogle(@RequestParam String idToken) {
         try {
