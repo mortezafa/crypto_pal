@@ -1,4 +1,4 @@
-package com.example.CryptoPal.config;
+package org.project.cryptopal.config;
 
 import com.google.auth.oauth2.GoogleCredentials;
 import com.google.firebase.FirebaseApp;
@@ -8,23 +8,18 @@ import org.springframework.context.annotation.Configuration;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 
 @Configuration
 public class FirebaseConfig {
 
     @Bean
     public FirebaseApp initializeFirebase() throws IOException {
-        FileInputStream serviceAccount =
-                new FileInputStream("src/main/resources/cryptopal-d8870-firebase-adminsdk-cqztf-8c6d55a102.json");
-
+        InputStream serviceAccount = getClass().getClassLoader().getResourceAsStream("cryptopal-d8870-firebase-adminsdk-cqztf-8c6d55a102.json");
+        assert serviceAccount != null;
         FirebaseOptions options = new FirebaseOptions.Builder()
                 .setCredentials(GoogleCredentials.fromStream(serviceAccount))
                 .build();
-
-        
-
-
-
         return FirebaseApp.initializeApp(options);
     }
 }
