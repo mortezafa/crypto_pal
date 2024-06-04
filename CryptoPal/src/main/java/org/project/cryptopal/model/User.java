@@ -3,6 +3,7 @@ package org.project.cryptopal.model;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name = "app_user")
@@ -25,8 +26,8 @@ public class User {
     private String email;
     private LocalDateTime timeCreated;
 
-    @Column(name="walletAddress", unique = true)
-    private String walletAddress;
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<WalletAddress> walletAddress;
 
     public User() {
     }
@@ -67,13 +68,5 @@ public class User {
 
     public void setTimeCreated(LocalDateTime timeCreated) {
         this.timeCreated = timeCreated;
-    }
-
-    public String getWalletAddress() {
-        return walletAddress;
-    }
-
-    public void setWalletAddress(String walletAddress) {
-        this.walletAddress = walletAddress;
     }
 }
