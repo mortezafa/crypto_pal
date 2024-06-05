@@ -110,4 +110,12 @@ public class Asset {
     public void setTotalSupply(String totalSupply) {
         this.totalSupply = totalSupply;
     }
+
+    public WalletAddress getWalletAddress() {
+        return walletAddress;
+    }
+
+    public void setWalletAddress(WalletAddress walletAddress) {
+        this.walletAddress = walletAddress;
+    }
 }

@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -45,9 +46,9 @@ public class AuthController {
     }
 
     @PostMapping("/onboard")
-    public  ResponseEntity<Map<String, String>> onBoardUser(@RequestBody Map<String, String> onboardDetails) {
-        String walletAddress = onboardDetails.get("walletAddress");
-        String email = onboardDetails.get("email");
+    public  ResponseEntity<Map<String, String>> onBoardUser(@RequestBody Map<String, Object> onboardDetails) {
+        List<String> walletAddress =  (List<String>) onboardDetails.get("walletAddress");
+        String email = (String) onboardDetails.get("email");
 
         firebaseAuthService.addWalletAddress(email, walletAddress);
 

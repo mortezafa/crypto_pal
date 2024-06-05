@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 
 
 import java.time.LocalDateTime;
+import java.util.*;
 
 @Service
 public class FirebaseAuthService {
@@ -23,9 +24,6 @@ public class FirebaseAuthService {
     @Autowired
     private WalletRepository walletRepository;
 
-    public User findByEmail(String email) {
-        return userRepository.findByEmail(email);
-    }
     public FirebaseToken verifyToken(String idToken) throws FirebaseAuthException {
         return FirebaseAuth.getInstance().verifyIdToken(idToken);
     }
@@ -45,14 +43,31 @@ public class FirebaseAuthService {
         return user;
     }
 
-    public void addWalletAddress(String email, String walletAddress) {
-            WalletAddress walletAddress1 = walletRepository.getReferenceById()
-            walletAddress1.setWalletAddress(walletAddress);
-            walletRepository.findByEmail(email);
+    public void addWalletAddress(String email, List<String> walletAddress) {
+        for(String walletAddresses: walletAddress) {
+            // find user by Id in user repo
+            User user = userRepository.findByEmail(email);
+            // error handling if user null
+            if (user == null) {
+                throw new RuntimeException("There is no user with this Email" + email);
+            }
+
+            // instanicate and set walletaddress???
+            WalletAddress newWalletAddress = new WalletAddress();
+            newWalletAddress.setWalletAddress(walletAddresses);
+            newWalletAddress.setUser(user);
+
+
+            // save to wallet repo
+            walletRepository.save(newWalletAddress);
+        }
     }
 
-    public String getWalletAddressByEmail(String email) {
-        WalletAddress walletAddress = walletRepository.findByEmail(email);
-
+    public List<WalletAddress> getWalletAddressesByEmail(String email) {
+        User user = userRepository.findByEmail(email);
+        if (user == null) {
+            throw new RuntimeException("User with email: " + email + " not found");
+        }
+        return user.getWalletAddress();
     }
 }

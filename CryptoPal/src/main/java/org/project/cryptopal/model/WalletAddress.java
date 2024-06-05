@@ -24,6 +24,7 @@ public class WalletAddress {
     @ManyToOne
     @JoinColumn(name = "id", nullable = false)
     private User user;
+    //TODO: ask zealous if doing this only gives you access to id... like my other addwalletAddress function i just set user. Does that only set the ID cause i did "name = id"?
 
 
     @OneToMany(mappedBy = "walletAddress")

@@ -69,4 +69,12 @@ public class User {
     public void setTimeCreated(LocalDateTime timeCreated) {
         this.timeCreated = timeCreated;
     }
+
+    public List<WalletAddress> getWalletAddress() {
+        return walletAddress;
+    }
+
+    public void setWalletAddress(List<WalletAddress> walletAddress) {
+        this.walletAddress = walletAddress;
+    }
 }
