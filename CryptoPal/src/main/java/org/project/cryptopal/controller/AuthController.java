@@ -1,4 +1,5 @@
 package org.project.cryptopal.controller;
+
 import com.google.firebase.auth.FirebaseAuthException;
 import com.google.firebase.auth.FirebaseToken;
 import org.project.cryptopal.model.User;
@@ -21,7 +22,7 @@ public class AuthController {
 
 
     @PostMapping("/google")
-   public ResponseEntity<String> authenticateWithGoogle(@RequestParam String idToken) {
+    public ResponseEntity<String> authenticateWithGoogle(@RequestParam String idToken) {
         try {
             FirebaseToken decodedToken = firebaseAuthService.verifyToken(idToken);
             String uid = decodedToken.getUid();
@@ -41,16 +42,19 @@ public class AuthController {
         User user = firebaseAuthService.saveUserForTesting(email, displayName);
         Map<String, String> repsonse = new HashMap<>();
 
-        repsonse.put("message", "User saved Succesfully!");
+        repsonse.put("id", user.getId().toString());
+        repsonse.put("email", user.getEmail());
+
         return ResponseEntity.ok(repsonse);
     }
 
     @PostMapping("/onboard")
-    public  ResponseEntity<Map<String, String>> onBoardUser(@RequestBody Map<String, Object> onboardDetails) {
-        List<String> walletAddress =  (List<String>) onboardDetails.get("walletAddress");
-        String email = (String) onboardDetails.get("email");
+    public ResponseEntity<Map<String, String>> onBoardUser(@RequestBody Map<String, Object> onboardDetails) {
+        List<String> walletAddress = (List<String>) onboardDetails.get("walletAddress");
+        Long userId = Long.valueOf((Integer) onboardDetails.get("id"));
+        List<String> walletNickname = (List<String>) onboardDetails.get("walletNickname");
 
-        firebaseAuthService.addWalletAddress(email, walletAddress);
+        firebaseAuthService.addWalletAddress(userId, walletAddress, walletNickname);
 
         Map<String, String> response = new HashMap<>();
         response.put("message", "Wallet address updated successfully!");

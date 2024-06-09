@@ -19,7 +19,7 @@ import java.util.*;
 public class FirebaseAuthService {
 
     @Autowired
-     private UserRepository userRepository;
+    private UserRepository userRepository;
 
     @Autowired
     private WalletRepository walletRepository;
@@ -43,31 +43,32 @@ public class FirebaseAuthService {
         return user;
     }
 
-    public void addWalletAddress(String email, List<String> walletAddress) {
-        for(String walletAddresses: walletAddress) {
-            // find user by Id in user repo
-            User user = userRepository.findByEmail(email);
-            // error handling if user null
-            if (user == null) {
-                throw new RuntimeException("There is no user with this Email" + email);
-            }
+    public void addWalletAddress(Long id, List<String> walletAddress, List<String> walletNickname) {
+        if (walletAddress.size() != walletNickname.size()) {
+            throw new IllegalArgumentException("The number of wallet addresses must match the number of wallet nicknames");
+        }
 
-            // instanicate and set walletaddress???
+        //find the user once outside the loop
+        User user = userRepository.findById(id).orElseThrow(() -> new RuntimeException("User not found"));
+
+        for (int i = 0; i < walletAddress.size(); i++) {
+            //instaciate wallet object???
             WalletAddress newWalletAddress = new WalletAddress();
-            newWalletAddress.setWalletAddress(walletAddresses);
+            newWalletAddress.setWalletAddress(walletAddress.get(i));
+            newWalletAddress.setWalletNickname(walletNickname.get(i));
             newWalletAddress.setUser(user);
 
-
-            // save to wallet repo
+            //save to wallet repository
             walletRepository.save(newWalletAddress);
         }
     }
 
-    public List<WalletAddress> getWalletAddressesByEmail(String email) {
-        User user = userRepository.findByEmail(email);
-        if (user == null) {
-            throw new RuntimeException("User with email: " + email + " not found");
+
+    public List<WalletAddress> getWalletAddressesById(Long id) {
+        Optional<User> user = userRepository.findById(id);
+        if (user.isPresent()) {
+            return user.get().getWalletAddress();
         }
-        return user.getWalletAddress();
+        throw new RuntimeException("Could not fetch user by ID: " + id);
     }
 }

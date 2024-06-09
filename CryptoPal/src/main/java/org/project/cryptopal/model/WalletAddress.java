@@ -1,10 +1,18 @@
 package org.project.cryptopal.model;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 
 import java.util.List;
 
 @Entity
+@Setter
+@Getter
+@NoArgsConstructor
 @Table(name = "wallet_address")
 public class WalletAddress {
 
@@ -20,9 +28,11 @@ public class WalletAddress {
     )
     private Long walletId;
     private String walletAddress;
+    private String walletNickname;
 
     @ManyToOne
     @JoinColumn(name = "id", nullable = false)
+
     private User user;
     //TODO: ask zealous if doing this only gives you access to id... like my other addwalletAddress function i just set user. Does that only set the ID cause i did "name = id"?
 
@@ -31,29 +41,4 @@ public class WalletAddress {
     private List<Asset> assets;
 
 
-    public WalletAddress() {}
-
-    public String getWalletAddress() {
-        return walletAddress;
-    }
-
-    public void setWalletAddress(String walletAddress) {
-        this.walletAddress = walletAddress;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-    public List<Asset> getAssets() {
-        return assets;
-    }
-
-    public void setAssets(List<Asset> assets) {
-        this.assets = assets;
-    }
 }

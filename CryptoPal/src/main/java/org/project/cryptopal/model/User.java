@@ -1,12 +1,18 @@
 package org.project.cryptopal.model;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
 @Table(name = "app_user")
+@Getter
+@Setter
 public class User {
     @Id
     @SequenceGenerator(
@@ -19,14 +25,15 @@ public class User {
             generator = "user_sequence"
     )
     private Long id;
-    @Column(name="userName", unique=true)
+    @Column(name = "userName", unique = true)
     private String userName;
 
-    @Column(name="email", unique=true)
+    @Column(name = "email", unique = true)
     private String email;
     private LocalDateTime timeCreated;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+
     private List<WalletAddress> walletAddress;
 
     public User() {
