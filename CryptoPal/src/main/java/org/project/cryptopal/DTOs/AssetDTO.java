@@ -3,6 +3,9 @@ package org.project.cryptopal.DTOs;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
+import org.project.cryptopal.respones.GetAssetsResponse;
+
+import java.util.List;
 
 @Getter
 @Setter
@@ -11,6 +14,5 @@ public class AssetDTO {
     private String tokenName;
     private String tokenSymbol;
     private Double walletPrice;
-//    private String walletNickname;
-
+//    private List<GetAssetsResponse.Asset.Logo> logos;
 }

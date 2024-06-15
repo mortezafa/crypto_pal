@@ -39,6 +39,7 @@ public class WalletAddress {
 
     @OneToMany(mappedBy = "walletAddress")
     private List<Asset> assets;
+    // TODO: CHANGE CIRUCLAR REFERANCE
 
 
 }

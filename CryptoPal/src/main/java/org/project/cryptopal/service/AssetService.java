@@ -46,16 +46,23 @@ public class AssetService {
                 HttpHeaders headers = new HttpHeaders();
                 headers.set("x-api-key", "2heWvLUW25YbOqICnVPskNM4nB4");
                 HttpEntity<String> entity = new HttpEntity<>(headers);
-
                 RestTemplate restTemplate = new RestTemplate();
                 ResponseEntity<GetAssetsResponse> response = restTemplate.exchange(url, HttpMethod.GET, entity, GetAssetsResponse.class); //THIS IS WHERE PROGRAM BREAKS
                 GetAssetsResponse getAssetsResponse = response.getBody();
-
-
                 if (getAssetsResponse != null && getAssetsResponse.getResult() != null) {
-                    for (Asset asset : getAssetsResponse.getResult()) {
-                        asset.setWalletAddress(walletAddress); //setting the wallet address for each asset
-                        allAssets.add(asset);
+                    for (GetAssetsResponse.Asset asset : getAssetsResponse.getResult()) {
+                        allAssets.add(
+                                Asset.builder()
+                                        .tokenQuantity(asset.getTokenQuantity())
+                                        .contractAddress(asset.getContractAddress())
+                                        .decimals(asset.getDecimals())
+                                        .tokenSymbol(asset.getTokenSymbol())
+                                        .tokenName(asset.getTokenName())
+                                        .totalSupply(asset.getTotalSupply())
+                                        .walletPrice(asset.getWalletPrice())
+                                        .walletAddress(walletAddress)
+                                        .build()
+                        );
                     }
                     if (getAssetsResponse.getNextPage() != null) {
                         page = getAssetsResponse.getNextPage();
