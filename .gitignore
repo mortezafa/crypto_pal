@@ -1,5 +1,5 @@
-CryptoPal/HELP.md
-target/
+../HELP.md
+CryptoPal/target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
@@ -32,3 +32,5 @@ build/
 ### VS Code ###
 .vscode/
 src/main/resources/cryptopal-d8870-firebase-adminsdk-cqztf-74f6b34aeb.json
+.DS_Store
+GoogleService-Info.plist
