@@ -1,14 +1,19 @@
 package org.project.cryptopal.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.google.api.client.json.JsonPolymorphicTypeMap;
+import io.hypersistence.utils.hibernate.type.json.JsonType;
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.Type;
+import org.project.cryptopal.respones.GetAssetsResponse;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Entity
 @Table(name = "asset_table")
-
 @Builder
 @Getter
 @Setter
@@ -52,5 +57,7 @@ public class Asset {
     @JoinColumn(name = "walletId", nullable = false)
     private WalletAddress walletAddress;
 
-
+    @Type(JsonType.class)
+    @Column(columnDefinition = "jsonb")
+    private List<GetAssetsResponse.Asset.Logo> logosList;
 }

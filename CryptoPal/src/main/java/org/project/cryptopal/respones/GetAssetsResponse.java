@@ -56,13 +56,13 @@ public class GetAssetsResponse {
         @Setter
         public static class Logo {
             @JsonProperty("uri")
-            private String url;
+            private String uri;
 
-            @JsonProperty("height")
-            private int height;
-
-            @JsonProperty("width")
-            private int width;
+//            @JsonProperty("height")
+//            private int height;
+//
+//            @JsonProperty("width")
+//            private int width;
         }
     }
 

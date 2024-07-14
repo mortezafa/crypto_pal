@@ -14,5 +14,5 @@ public class AssetDTO {
     private String tokenName;
     private String tokenSymbol;
     private Double walletPrice;
-//    private List<GetAssetsResponse.Asset.Logo> logos;
+    private List<GetAssetsResponse.Asset.Logo> logos;
 }

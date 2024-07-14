@@ -24,14 +24,19 @@ public class AuthController {
     @PostMapping("/google")
     public ResponseEntity<String> authenticateWithGoogle(@RequestParam String idToken) {
         try {
+            System.out.println("Received ID Token: " + idToken);
             FirebaseToken decodedToken = firebaseAuthService.verifyToken(idToken);
             String uid = decodedToken.getUid();
+            System.out.println("Decoded Token UID: " + uid);
+            System.out.println("Decoded Token Audience: " + decodedToken.getIssuer());
             firebaseAuthService.saveIfUserNotExists(uid);
             return ResponseEntity.ok("User authenticated with UID: " + uid);
         } catch (FirebaseAuthException e) {
+            System.err.println("FirebaseAuthException: " + e.getMessage());
             return ResponseEntity.badRequest().body("Error: " + e.getMessage());
         }
     }
+
 
     @PostMapping("/test-user")
     public ResponseEntity<Map<String, String>> testSaveUser(@RequestBody Map<String, String> userDetails) {

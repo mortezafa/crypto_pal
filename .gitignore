@@ -1,4 +1,4 @@
-HELP.md
+CryptoPal/HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
@@ -31,4 +31,4 @@ build/
 
 ### VS Code ###
 .vscode/
-src/main/resources/cryptopal-d8870-firebase-adminsdk-cqztf-8c6d55a102.json
+src/main/resources/cryptopal-d8870-firebase-adminsdk-cqztf-74f6b34aeb.json

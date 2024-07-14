@@ -61,7 +61,9 @@ public class AssetService {
                                         .totalSupply(asset.getTotalSupply())
                                         .walletPrice(asset.getWalletPrice())
                                         .walletAddress(walletAddress)
+                                        .logosList(asset.getLogos())
                                         .build()
+
                         );
                     }
                     if (getAssetsResponse.getNextPage() != null) {
@@ -92,7 +94,7 @@ public class AssetService {
             if (!assetsByWallet.containsKey(walletAddress)) {
                 assetsByWallet.put(walletAddress, new ArrayList<>());
             }
-            AssetDTO assetDTO = new AssetDTO(asset.getTokenName(), asset.getTokenSymbol(), asset.getWalletPrice());
+            AssetDTO assetDTO = new AssetDTO(asset.getTokenName(), asset.getTokenSymbol(), asset.getWalletPrice(), asset.getLogosList());
             assetsByWallet.get(walletAddress).add(assetDTO);
 
         }
