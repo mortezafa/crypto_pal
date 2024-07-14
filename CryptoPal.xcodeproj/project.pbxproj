@@ -1,0 +1,794 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7C98E9922C1E3A7100D59B24 /* ChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C98E9912C1E3A7100D59B24 /* ChartViewModel.swift */; };
+		7C98E9952C1F636300D59B24 /* PortfolioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C98E9942C1F636300D59B24 /* PortfolioManager.swift */; };
+		7C98E9982C1FCC9200D59B24 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 7C98E9972C1FCC9200D59B24 /* FirebaseAppCheck */; };
+		7C98E99A2C1FCC9200D59B24 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 7C98E9992C1FCC9200D59B24 /* FirebaseAuth */; };
+		7C98E99C2C1FCC9200D59B24 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7C98E99B2C1FCC9200D59B24 /* FirebaseFirestoreSwift */; };
+		7C98E99E2C1FCCAC00D59B24 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C98E99D2C1FCCAC00D59B24 /* AuthViewModel.swift */; };
+		7C98E9A12C1FCD2100D59B24 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 7C98E9A02C1FCD2100D59B24 /* GoogleSignIn */; };
+		7C98E9A32C1FCD2100D59B24 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7C98E9A22C1FCD2100D59B24 /* GoogleSignInSwift */; };
+		7C98E9A72C1FDB2300D59B24 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C98E9A62C1FDB2300D59B24 /* AuthView.swift */; };
+		7C98E9A92C21290F00D59B24 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C98E9A82C21290F00D59B24 /* GoogleService-Info.plist */; };
+		7C98E9AC2C213A3C00D59B24 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C98E9AB2C213A3C00D59B24 /* LoginView.swift */; };
+		7C98E9AF2C213D2A00D59B24 /* CustomTextField in Frameworks */ = {isa = PBXBuildFile; productRef = 7C98E9AE2C213D2A00D59B24 /* CustomTextField */; };
+		7C98E9B12C25EFA200D59B24 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C98E9B02C25EFA200D59B24 /* OnboardingView.swift */; };
+		7C98E9B42C25F59E00D59B24 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C98E9B32C25F59E00D59B24 /* ButtonStyles.swift */; };
+		7C98E9B62C25FCFE00D59B24 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C98E9B52C25FCFE00D59B24 /* WelcomeView.swift */; };
+		7C98E9B82C25FECE00D59B24 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C98E9B72C25FECE00D59B24 /* ContentView.swift */; };
+		7CADD62B2C2B2A35003F02DB /* PortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CADD62A2C2B2A35003F02DB /* PortfolioView.swift */; };
+		7CADD62D2C2B2A75003F02DB /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CADD62C2C2B2A75003F02DB /* ChatView.swift */; };
+		7CF05ED02C12778D0004973D /* CryptoPalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF05ECF2C12778D0004973D /* CryptoPalApp.swift */; };
+		7CF05ED22C12778D0004973D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF05ED12C12778D0004973D /* HomeView.swift */; };
+		7CF05ED42C12778E0004973D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CF05ED32C12778E0004973D /* Assets.xcassets */; };
+		7CF05ED72C12778E0004973D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CF05ED62C12778E0004973D /* Preview Assets.xcassets */; };
+		7CF05EE12C12778E0004973D /* CryptoPalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF05EE02C12778E0004973D /* CryptoPalTests.swift */; };
+		7CF05EEB2C12778E0004973D /* CryptoPalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF05EEA2C12778E0004973D /* CryptoPalUITests.swift */; };
+		7CF05EED2C12778E0004973D /* CryptoPalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF05EEC2C12778E0004973D /* CryptoPalUITestsLaunchTests.swift */; };
+		7CF05EFC2C127B8B0004973D /* Gilroy-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7CF05EFA2C127AAF0004973D /* Gilroy-Light.otf */; };
+		7CF05EFD2C127B8B0004973D /* Gilroy-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7CF05EFA2C127AAF0004973D /* Gilroy-Light.otf */; };
+		7CF05EFE2C127B8C0004973D /* Gilroy-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7CF05EFA2C127AAF0004973D /* Gilroy-Light.otf */; };
+		7CF05EFF2C127B8E0004973D /* Gilroy-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7CF05EF92C127AAF0004973D /* Gilroy-ExtraBold.otf */; };
+		7CF05F002C127B8F0004973D /* Gilroy-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7CF05EF92C127AAF0004973D /* Gilroy-ExtraBold.otf */; };
+		7CF05F012C127B8F0004973D /* Gilroy-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7CF05EF92C127AAF0004973D /* Gilroy-ExtraBold.otf */; };
+		7CF05F042C12A1200004973D /* AssetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF05F032C12A1200004973D /* AssetViewModel.swift */; };
+		7CF05F062C12A4210004973D /* AssetStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF05F052C12A4210004973D /* AssetStructure.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7CF05EDD2C12778E0004973D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7CF05EC42C12778D0004973D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7CF05ECB2C12778D0004973D;
+			remoteInfo = CryptoPal;
+		};
+		7CF05EE72C12778E0004973D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7CF05EC42C12778D0004973D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7CF05ECB2C12778D0004973D;
+			remoteInfo = CryptoPal;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7C98E9912C1E3A7100D59B24 /* ChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewModel.swift; sourceTree = "<group>"; };
+		7C98E9942C1F636300D59B24 /* PortfolioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioManager.swift; sourceTree = "<group>"; };
+		7C98E99D2C1FCCAC00D59B24 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		7C98E9A62C1FDB2300D59B24 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		7C98E9A82C21290F00D59B24 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7C98E9AB2C213A3C00D59B24 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		7C98E9B02C25EFA200D59B24 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		7C98E9B32C25F59E00D59B24 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
+		7C98E9B52C25FCFE00D59B24 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		7C98E9B72C25FECE00D59B24 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7CADD62A2C2B2A35003F02DB /* PortfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioView.swift; sourceTree = "<group>"; };
+		7CADD62C2C2B2A75003F02DB /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		7CF05ECC2C12778D0004973D /* CryptoPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CF05ECF2C12778D0004973D /* CryptoPalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoPalApp.swift; sourceTree = "<group>"; };
+		7CF05ED12C12778D0004973D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		7CF05ED32C12778E0004973D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7CF05ED62C12778E0004973D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7CF05EDC2C12778E0004973D /* CryptoPalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoPalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CF05EE02C12778E0004973D /* CryptoPalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoPalTests.swift; sourceTree = "<group>"; };
+		7CF05EE62C12778E0004973D /* CryptoPalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoPalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CF05EEA2C12778E0004973D /* CryptoPalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoPalUITests.swift; sourceTree = "<group>"; };
+		7CF05EEC2C12778E0004973D /* CryptoPalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoPalUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7CF05EF92C127AAF0004973D /* Gilroy-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-ExtraBold.otf"; sourceTree = "<group>"; };
+		7CF05EFA2C127AAF0004973D /* Gilroy-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Light.otf"; sourceTree = "<group>"; };
+		7CF05F022C127BAE0004973D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7CF05F032C12A1200004973D /* AssetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetViewModel.swift; sourceTree = "<group>"; };
+		7CF05F052C12A4210004973D /* AssetStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetStructure.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7CF05EC92C12778D0004973D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C98E9A32C1FCD2100D59B24 /* GoogleSignInSwift in Frameworks */,
+				7C98E9AF2C213D2A00D59B24 /* CustomTextField in Frameworks */,
+				7C98E9982C1FCC9200D59B24 /* FirebaseAppCheck in Frameworks */,
+				7C98E9A12C1FCD2100D59B24 /* GoogleSignIn in Frameworks */,
+				7C98E99A2C1FCC9200D59B24 /* FirebaseAuth in Frameworks */,
+				7C98E99C2C1FCC9200D59B24 /* FirebaseFirestoreSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7CF05ED92C12778E0004973D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7CF05EE32C12778E0004973D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7C98E9902C1E3A6000D59B24 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7CF05F032C12A1200004973D /* AssetViewModel.swift */,
+				7CF05F052C12A4210004973D /* AssetStructure.swift */,
+				7C98E9912C1E3A7100D59B24 /* ChartViewModel.swift */,
+				7C98E9942C1F636300D59B24 /* PortfolioManager.swift */,
+				7C98E99D2C1FCCAC00D59B24 /* AuthViewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7C98E9AA2C213A2700D59B24 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7CF05ED12C12778D0004973D /* HomeView.swift */,
+				7C98E9A62C1FDB2300D59B24 /* AuthView.swift */,
+				7C98E9AB2C213A3C00D59B24 /* LoginView.swift */,
+				7C98E9B02C25EFA200D59B24 /* OnboardingView.swift */,
+				7C98E9B52C25FCFE00D59B24 /* WelcomeView.swift */,
+				7CADD62A2C2B2A35003F02DB /* PortfolioView.swift */,
+				7CADD62C2C2B2A75003F02DB /* ChatView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7C98E9B22C25F59100D59B24 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				7C98E9B32C25F59E00D59B24 /* ButtonStyles.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		7CADD6292C2B2A17003F02DB /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				7CF05ECF2C12778D0004973D /* CryptoPalApp.swift */,
+				7C98E9B72C25FECE00D59B24 /* ContentView.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		7CF05EC32C12778D0004973D = {
+			isa = PBXGroup;
+			children = (
+				7C98E9A82C21290F00D59B24 /* GoogleService-Info.plist */,
+				7CF05EFB2C127ABA0004973D /* Fonts */,
+				7CF05ECE2C12778D0004973D /* CryptoPal */,
+				7CF05EDF2C12778E0004973D /* CryptoPalTests */,
+				7CF05EE92C12778E0004973D /* CryptoPalUITests */,
+				7CF05ECD2C12778D0004973D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7CF05ECD2C12778D0004973D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7CF05ECC2C12778D0004973D /* CryptoPal.app */,
+				7CF05EDC2C12778E0004973D /* CryptoPalTests.xctest */,
+				7CF05EE62C12778E0004973D /* CryptoPalUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7CF05ECE2C12778D0004973D /* CryptoPal */ = {
+			isa = PBXGroup;
+			children = (
+				7CADD6292C2B2A17003F02DB /* Core */,
+				7C98E9B22C25F59100D59B24 /* Styles */,
+				7C98E9AA2C213A2700D59B24 /* Views */,
+				7C98E9902C1E3A6000D59B24 /* Models */,
+				7CF05F022C127BAE0004973D /* Info.plist */,
+				7CF05ED32C12778E0004973D /* Assets.xcassets */,
+				7CF05ED52C12778E0004973D /* Preview Content */,
+			);
+			path = CryptoPal;
+			sourceTree = "<group>";
+		};
+		7CF05ED52C12778E0004973D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				7CF05ED62C12778E0004973D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7CF05EDF2C12778E0004973D /* CryptoPalTests */ = {
+			isa = PBXGroup;
+			children = (
+				7CF05EE02C12778E0004973D /* CryptoPalTests.swift */,
+			);
+			path = CryptoPalTests;
+			sourceTree = "<group>";
+		};
+		7CF05EE92C12778E0004973D /* CryptoPalUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7CF05EEA2C12778E0004973D /* CryptoPalUITests.swift */,
+				7CF05EEC2C12778E0004973D /* CryptoPalUITestsLaunchTests.swift */,
+			);
+			path = CryptoPalUITests;
+			sourceTree = "<group>";
+		};
+		7CF05EFB2C127ABA0004973D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7CF05EFA2C127AAF0004973D /* Gilroy-Light.otf */,
+				7CF05EF92C127AAF0004973D /* Gilroy-ExtraBold.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7CF05ECB2C12778D0004973D /* CryptoPal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7CF05EF02C12778E0004973D /* Build configuration list for PBXNativeTarget "CryptoPal" */;
+			buildPhases = (
+				7CF05EC82C12778D0004973D /* Sources */,
+				7CF05EC92C12778D0004973D /* Frameworks */,
+				7CF05ECA2C12778D0004973D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CryptoPal;
+			packageProductDependencies = (
+				7C98E9972C1FCC9200D59B24 /* FirebaseAppCheck */,
+				7C98E9992C1FCC9200D59B24 /* FirebaseAuth */,
+				7C98E99B2C1FCC9200D59B24 /* FirebaseFirestoreSwift */,
+				7C98E9A02C1FCD2100D59B24 /* GoogleSignIn */,
+				7C98E9A22C1FCD2100D59B24 /* GoogleSignInSwift */,
+				7C98E9AE2C213D2A00D59B24 /* CustomTextField */,
+			);
+			productName = CryptoPal;
+			productReference = 7CF05ECC2C12778D0004973D /* CryptoPal.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7CF05EDB2C12778E0004973D /* CryptoPalTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7CF05EF32C12778E0004973D /* Build configuration list for PBXNativeTarget "CryptoPalTests" */;
+			buildPhases = (
+				7CF05ED82C12778E0004973D /* Sources */,
+				7CF05ED92C12778E0004973D /* Frameworks */,
+				7CF05EDA2C12778E0004973D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7CF05EDE2C12778E0004973D /* PBXTargetDependency */,
+			);
+			name = CryptoPalTests;
+			productName = CryptoPalTests;
+			productReference = 7CF05EDC2C12778E0004973D /* CryptoPalTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7CF05EE52C12778E0004973D /* CryptoPalUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7CF05EF62C12778E0004973D /* Build configuration list for PBXNativeTarget "CryptoPalUITests" */;
+			buildPhases = (
+				7CF05EE22C12778E0004973D /* Sources */,
+				7CF05EE32C12778E0004973D /* Frameworks */,
+				7CF05EE42C12778E0004973D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7CF05EE82C12778E0004973D /* PBXTargetDependency */,
+			);
+			name = CryptoPalUITests;
+			productName = CryptoPalUITests;
+			productReference = 7CF05EE62C12778E0004973D /* CryptoPalUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7CF05EC42C12778D0004973D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					7CF05ECB2C12778D0004973D = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					7CF05EDB2C12778E0004973D = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 7CF05ECB2C12778D0004973D;
+					};
+					7CF05EE52C12778E0004973D = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 7CF05ECB2C12778D0004973D;
+					};
+				};
+			};
+			buildConfigurationList = 7CF05EC72C12778D0004973D /* Build configuration list for PBXProject "CryptoPal" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7CF05EC32C12778D0004973D;
+			packageReferences = (
+				7C98E9962C1FCC9200D59B24 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				7C98E99F2C1FCD2100D59B24 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				7C98E9AD2C213D2A00D59B24 /* XCRemoteSwiftPackageReference "SwiftUI-Custom-TextField" */,
+			);
+			productRefGroup = 7CF05ECD2C12778D0004973D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7CF05ECB2C12778D0004973D /* CryptoPal */,
+				7CF05EDB2C12778E0004973D /* CryptoPalTests */,
+				7CF05EE52C12778E0004973D /* CryptoPalUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7CF05ECA2C12778D0004973D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CF05ED72C12778E0004973D /* Preview Assets.xcassets in Resources */,
+				7CF05ED42C12778E0004973D /* Assets.xcassets in Resources */,
+				7CF05EFC2C127B8B0004973D /* Gilroy-Light.otf in Resources */,
+				7C98E9A92C21290F00D59B24 /* GoogleService-Info.plist in Resources */,
+				7CF05EFF2C127B8E0004973D /* Gilroy-ExtraBold.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7CF05EDA2C12778E0004973D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CF05EFD2C127B8B0004973D /* Gilroy-Light.otf in Resources */,
+				7CF05F002C127B8F0004973D /* Gilroy-ExtraBold.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7CF05EE42C12778E0004973D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CF05EFE2C127B8C0004973D /* Gilroy-Light.otf in Resources */,
+				7CF05F012C127B8F0004973D /* Gilroy-ExtraBold.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7CF05EC82C12778D0004973D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C98E9B42C25F59E00D59B24 /* ButtonStyles.swift in Sources */,
+				7C98E9922C1E3A7100D59B24 /* ChartViewModel.swift in Sources */,
+				7CF05F062C12A4210004973D /* AssetStructure.swift in Sources */,
+				7CF05F042C12A1200004973D /* AssetViewModel.swift in Sources */,
+				7C98E9B12C25EFA200D59B24 /* OnboardingView.swift in Sources */,
+				7C98E9AC2C213A3C00D59B24 /* LoginView.swift in Sources */,
+				7C98E99E2C1FCCAC00D59B24 /* AuthViewModel.swift in Sources */,
+				7CADD62D2C2B2A75003F02DB /* ChatView.swift in Sources */,
+				7C98E9B62C25FCFE00D59B24 /* WelcomeView.swift in Sources */,
+				7CF05ED22C12778D0004973D /* HomeView.swift in Sources */,
+				7CADD62B2C2B2A35003F02DB /* PortfolioView.swift in Sources */,
+				7C98E9952C1F636300D59B24 /* PortfolioManager.swift in Sources */,
+				7C98E9B82C25FECE00D59B24 /* ContentView.swift in Sources */,
+				7C98E9A72C1FDB2300D59B24 /* AuthView.swift in Sources */,
+				7CF05ED02C12778D0004973D /* CryptoPalApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7CF05ED82C12778E0004973D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CF05EE12C12778E0004973D /* CryptoPalTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7CF05EE22C12778E0004973D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CF05EEB2C12778E0004973D /* CryptoPalUITests.swift in Sources */,
+				7CF05EED2C12778E0004973D /* CryptoPalUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7CF05EDE2C12778E0004973D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7CF05ECB2C12778D0004973D /* CryptoPal */;
+			targetProxy = 7CF05EDD2C12778E0004973D /* PBXContainerItemProxy */;
+		};
+		7CF05EE82C12778E0004973D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7CF05ECB2C12778D0004973D /* CryptoPal */;
+			targetProxy = 7CF05EE72C12778E0004973D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		7CF05EEE2C12778E0004973D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7CF05EEF2C12778E0004973D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7CF05EF12C12778E0004973D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CryptoPal/Preview Content\"";
+				DEVELOPMENT_TEAM = B83J2A83H6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CryptoPal/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.teezy.CryptoPal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7CF05EF22C12778E0004973D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CryptoPal/Preview Content\"";
+				DEVELOPMENT_TEAM = B83J2A83H6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CryptoPal/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.teezy.CryptoPal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7CF05EF42C12778E0004973D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B83J2A83H6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.teezy.CryptoPalTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CryptoPal.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CryptoPal";
+			};
+			name = Debug;
+		};
+		7CF05EF52C12778E0004973D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B83J2A83H6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.teezy.CryptoPalTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CryptoPal.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CryptoPal";
+			};
+			name = Release;
+		};
+		7CF05EF72C12778E0004973D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B83J2A83H6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.teezy.CryptoPalUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CryptoPal;
+			};
+			name = Debug;
+		};
+		7CF05EF82C12778E0004973D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B83J2A83H6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.teezy.CryptoPalUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CryptoPal;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7CF05EC72C12778D0004973D /* Build configuration list for PBXProject "CryptoPal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7CF05EEE2C12778E0004973D /* Debug */,
+				7CF05EEF2C12778E0004973D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7CF05EF02C12778E0004973D /* Build configuration list for PBXNativeTarget "CryptoPal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7CF05EF12C12778E0004973D /* Debug */,
+				7CF05EF22C12778E0004973D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7CF05EF32C12778E0004973D /* Build configuration list for PBXNativeTarget "CryptoPalTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7CF05EF42C12778E0004973D /* Debug */,
+				7CF05EF52C12778E0004973D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7CF05EF62C12778E0004973D /* Build configuration list for PBXNativeTarget "CryptoPalUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7CF05EF72C12778E0004973D /* Debug */,
+				7CF05EF82C12778E0004973D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7C98E9962C1FCC9200D59B24 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.27.0;
+			};
+		};
+		7C98E99F2C1FCD2100D59B24 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.1.0;
+			};
+		};
+		7C98E9AD2C213D2A00D59B24 /* XCRemoteSwiftPackageReference "SwiftUI-Custom-TextField" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/esatgozcu/SwiftUI-Custom-TextField";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7C98E9972C1FCC9200D59B24 /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C98E9962C1FCC9200D59B24 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		7C98E9992C1FCC9200D59B24 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C98E9962C1FCC9200D59B24 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		7C98E99B2C1FCC9200D59B24 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C98E9962C1FCC9200D59B24 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		7C98E9A02C1FCD2100D59B24 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C98E99F2C1FCD2100D59B24 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		7C98E9A22C1FCD2100D59B24 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C98E99F2C1FCD2100D59B24 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+		7C98E9AE2C213D2A00D59B24 /* CustomTextField */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C98E9AD2C213D2A00D59B24 /* XCRemoteSwiftPackageReference "SwiftUI-Custom-TextField" */;
+			productName = CustomTextField;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 7CF05EC42C12778D0004973D /* Project object */;
+}
