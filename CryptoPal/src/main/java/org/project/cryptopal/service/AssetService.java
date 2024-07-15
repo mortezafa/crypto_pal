@@ -44,7 +44,7 @@ public class AssetService {
             while (morePages) {
                 String url = String.format("https://api.chainbase.online/v1/account/tokens?chain_id=1&address=%s&contract_address=&limit=100&page=%d", walletAddress.getWalletAddress(), page);
                 HttpHeaders headers = new HttpHeaders();
-                headers.set("x-api-key", "2heWvLUW25YbOqICnVPskNM4nB4");
+                headers.set("x-api-key", "API_KEY");
                 HttpEntity<String> entity = new HttpEntity<>(headers);
                 RestTemplate restTemplate = new RestTemplate();
                 ResponseEntity<GetAssetsResponse> response = restTemplate.exchange(url, HttpMethod.GET, entity, GetAssetsResponse.class); //THIS IS WHERE PROGRAM BREAKS
